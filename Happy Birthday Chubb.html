@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: rgb(171, 62, 233);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .tulip {
+            margin: 20px 0;
+        }
+        img {
+            width: 150px; /* Adjust size as needed */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 id="birthdayMessage">Happy Birthday 20th, My Chubb!</h1>
+        <button onclick="changeMessage()">Press this button if Mesh is your favourite human :D</button>
+        <div class="tulip">
+            <svg width="100" height="200" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 10 C65 20, 85 20, 70 40 C85 50, 80 80, 50 70 C20 80, 15 50, 30 40 C15 20, 35 20, 50 10 Z" fill="pink"/>
+                <rect x="45" y="70" width="10" height="100" fill="green"/>
+            </svg>
+        </div>
+        <img src="https://www.whiteflowerfarm.com/mas_assets/cache/image/7/5/3/c/30012.Jpg" alt="Pink Tulip">
+    </div>
+
+    <script>
+        const messages = [
+            "AWWWWW, i know i am *kiss*",
+            "Awwww stopppppp, you are flattering me, heheh",
+            "btw, the first image is me trying to create a PINK TULIP for you in code but eh, I added the google one because I know you like the pink ones.",
+            "anyways",
+            "Happy Birthday, Nidhi. You are such a special person.",
+            "Have an amazing day!",
+            "I wish I could of spent this day with you <3",
+            "I hope you enjoy your gift!",
+            "You are my favourite bestie!!!!",
+            "I love you always...",
+            "Lots of love, Mesh",
+        ];
+
+        let currentIndex = 0; // Initialize current index
+
+        function changeMessage() {
+            if (currentIndex < messages.length) {
+                document.getElementById("birthdayMessage").innerText = messages[currentIndex];
+                currentIndex++; // Increment the index
+            } else {
+                document.getElementById("birthdayMessage").innerText = "  ";
+            }
+        }
+    </script>
+</body>
+</html>
